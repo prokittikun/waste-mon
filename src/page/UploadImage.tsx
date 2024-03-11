@@ -57,7 +57,7 @@ function UploadImage() {
       formData.append("file", file);
 
       axios
-        .post("https://waste-mon-api.kittikun.me/classify", formData)
+        .post(`${process.env.REACT_APP_API_URL!}/classify`, formData)
         .then((response: any) => {
           console.log(response.data);
           resolve({ result: response.data.prediction.class, index });

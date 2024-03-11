@@ -37,7 +37,12 @@ function PreviewImage({
           style={{ width: "55px", height: "55px", objectFit: "cover" }}
         />
         <div className="flex flex-col justify-center">
-          <span className="font-medium">{name}</span>
+          <span className="font-medium">
+            {
+              // add ... middle of name when name is too long
+              name.length > 18 ? name.slice(0, 16) + "..." : name
+            }
+          </span>
           <span className="text-xs text-slate-400">
             {(size / 1024).toFixed(2)} KB
           </span>
@@ -80,11 +85,7 @@ function PreviewImage({
           </div>
         ) : null}
 
-        <Trash2
-          className="cursor-pointer"
-          color="#ff0000"
-          onClick={onClick}
-        />
+        <Trash2 className="cursor-pointer" color="#ff0000" onClick={onClick} />
       </div>
     </div>
   );
