@@ -44,7 +44,7 @@ function UploadImage() {
     });
   }, []);
 
-  const { getRootProps, isDragActive } = useDropzone({
+  const { getRootProps, getInputProps, isDragActive } = useDropzone({
     onDrop,
   });
 
@@ -217,6 +217,11 @@ function UploadImage() {
                 </p>
               </div>
             </Label>
+            <input
+              {...getInputProps()}
+              type="file"
+              className=""/>
+              asd
           </div>
           <div className="flex justify-between items-center">
             <span className="font-bold text-xl ">Files in queue</span>
