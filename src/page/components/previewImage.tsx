@@ -39,7 +39,6 @@ function PreviewImage({
         <div className="flex flex-col justify-center">
           <span className="font-medium">
             {
-              // add ... middle of name when name is too long
               name.length > 18 ? name.slice(0, 16) + "..." : name
             }
           </span>
