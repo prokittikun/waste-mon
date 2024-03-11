@@ -46,6 +46,13 @@ function UploadImage() {
 
   const { getRootProps, getInputProps, isDragActive } = useDropzone({
     onDrop,
+    accept: {
+      "image/jpeg": [],
+      "image/png": [],
+      "image/webp": [],
+      "image/heic": [],
+      "image/jfif": [],
+    },
   });
 
   const classifyImage = (
@@ -220,8 +227,9 @@ function UploadImage() {
             <input
               {...getInputProps()}
               type="file"
-              className=""/>
-              asd
+              accept="image/png, image/gif, image/jpeg"
+              className=""
+            />
           </div>
           <div className="flex justify-between items-center">
             <span className="font-bold text-xl ">Files in queue</span>
