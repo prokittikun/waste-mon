@@ -1,5 +1,5 @@
 import { Label } from "flowbite-react";
-import { FileSearch } from "lucide-react";
+import { Camera, Cpu, FileSearch, ImageUp, ListChecks } from "lucide-react";
 import { useCallback, useState } from "react";
 import { FileWithPath, useDropzone } from "react-dropzone";
 import PreviewImage from "./components/previewImage";
@@ -127,8 +127,8 @@ function UploadImage() {
   };
 
   return (
-    <div className="flex flex-col w-screen h-screen">
-      <div className=" flex justify-center items-center bg">
+    <>
+      <div className="relative w-full h-[100vh] flex justify-center items-center bg">
         <div className="relative bg-white max-w-[32rem] max-h-[43rem] flex flex-col gap-4 h-full w-full rounded-3xl p-5 shadow-xl mx-3 md:mx-4">
           <div className="flex justify-center">
             <img
@@ -274,7 +274,64 @@ function UploadImage() {
           )}
         </div>
       </div>
-    </div>
+      <div className="flex flex-col  h-screen justify-start items-center mt-14 gap-12 lg:gap-28 lg:mt-[10rem]">
+        <div className="flex flex-col justify-center items-center">
+          <div className="text-center text-[2.5rem] font-bold text-[#00d748]">
+            4 Easy Steps to Use the Waste-Mon
+          </div>
+          <div className="text-center text-xl text-[#00d748]">
+            Turn Waste into Resources
+          </div>
+        </div>
+        <div className="flex flex-col lg:flex-row gap-4">
+          <div className="bg-green-50 w-[21rem] h-[21rem] flex flex-col gap-3 justify-center items-center px-6">
+            <div className="bg-white w-32 h-32 rounded-full flex justify-center items-center border-4 border-[#00d748]">
+              <Camera size={80} color="#00d748" />
+            </div>
+            <span className="text-2xl font-semibold text-[#00d748] text-center">
+              Take a photo
+            </span>
+            <span className="text-[#00d748] text-center">
+              Just snap a photo of the trash that catches your eye
+            </span>
+          </div>
+          <div className="bg-green-50 w-[21rem] h-[21rem] flex flex-col gap-3 justify-center items-center px-6">
+            <div className="bg-white w-32 h-32 rounded-full flex justify-center items-center border-4 border-[#00d748]">
+              <ImageUp size={80} color="#00d748" />
+            </div>
+            <span className="text-2xl font-semibold text-[#00d748] text-center">
+              Upload
+            </span>
+            <span className="text-[#00d748] text-center">
+              Once you're done, select "Upload Image" to proceed.
+            </span>
+          </div>
+          <div className="bg-green-50 w-[21rem] h-[21rem] flex flex-col gap-3 justify-center items-center px-6">
+            <div className="bg-white w-32 h-32 rounded-full flex justify-center items-center border-4 border-[#00d748]">
+              <Cpu size={80} color="#00d748" />
+            </div>
+            <span className="text-2xl font-semibold text-[#00d748] text-center">
+              Proceed
+            </span>
+            <span className="text-[#00d748] text-center">
+              Simply click the <b>"Classify"</b> button to let the system
+              analyze the image.
+            </span>
+          </div>
+          <div className="bg-green-50 w-[21rem] h-[21rem] flex flex-col gap-3 justify-center items-center px-6">
+            <div className="bg-white w-32 h-32 rounded-full flex justify-center items-center border-4 border-[#00d748]">
+              <ListChecks size={80} color="#00d748" />
+            </div>
+            <span className="text-2xl font-semibold text-[#00d748] text-center">
+              Completed
+            </span>
+            <span className="text-[#00d748] text-center">
+              Done! Check out the results, categorized as Organic and Recycle.
+            </span>
+          </div>
+        </div>
+      </div>
+    </>
   );
 }
 

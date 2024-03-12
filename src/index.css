@@ -14,13 +14,22 @@
   }
 }
 
+@layer base {
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
+
 .bg {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-    url("../public/photo-1532601224476-15c79f2f7a51.avif");
-  background-size: cover;
-  background-position: center center;
-  width: 100vw;
-  height: 100vh;
+  /* background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url("../public/photo-1532601224476-15c79f2f7a51.avif") 0% 0%; */
+  /* background-size: cover; */
+  /* background-position: center center; */
+  /* width: 100vw;
+  height: 100vh; */
+  background: url("../public/photo-1532601224476-15c79f2f7a51.avif") 0% 0% / cover no-repeat;
 }
 
 * {
