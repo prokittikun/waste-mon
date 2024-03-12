@@ -127,9 +127,9 @@ function UploadImage() {
   };
 
   return (
-    <>
+    <div>
       <div className="relative w-full h-[100vh] flex justify-center items-center bg">
-        <div className="relative bg-white max-w-[32rem] max-h-[43rem] flex flex-col gap-4 h-full w-full rounded-3xl p-5 shadow-xl mx-3 md:mx-4">
+        <div className="relative bg-white max-w-[32rem] max-h-[43rem] flex flex-col gap-4 h-full w-full rounded-3xl p-5 shadow-xl mx-4">
           <div className="flex justify-center">
             <img
               src="/wastemon-logo.png"
@@ -331,7 +331,7 @@ function UploadImage() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 
